@@ -14,3 +14,9 @@ You can pass the input folder for the project, output path to messages.po and tu
 
 Extension and language are added on purpose - for example, some PHP versions are not compiled with gettext support,
 but the C++ language would handle this if your calls are with double quotes.
+
+In terminal, the script could be executed by typing:
+
+    java -jar dx-source-translator.jar
+    
+1.7 JRE (Java Runtime Environment) is required for running it.
