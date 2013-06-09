@@ -81,6 +81,19 @@ public class SourceWorker {
 		return command;
 	}
 	
+	/**
+	 * This is the main method that does the heavy lifting for translations
+	 * being generated. It fetches the files, and then passes them to
+	 * xgettext for the rest of the job.
+	 * 
+	 * Due to Runtime exec limitations and RedHat find specifics
+	 * the file fetching is done separately, otherwise I would rather do
+	 * 
+	 *  find /path/to/project -iname *.php | xargs xgettext --language=PHP --keyword=__ -j -f - -o /path/to/messages.po
+	 * 
+	 * 
+	 * @return confirmation for translation
+	 */
 	public String executeTranslation() {
 		List<String> filesList = findFiles();
 		saveFiles("pocandidates.txt", filesList);
