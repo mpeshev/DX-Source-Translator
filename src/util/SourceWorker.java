@@ -38,13 +38,6 @@ public class SourceWorker {
 		this.extension = extension;
 		this.outputFile = outputFile;
 		this.functions = functionStr.split("[, ]+");
-		
-//		System.out.println("Input fields for worker:");
-//		System.out.println("PF: " + projectFolder);
-//		System.out.println("Lang: " + language);
-//		System.out.println("Ext: " + extension);
-//		System.out.println("Funcs: " + functionStr);
-//		System.out.println("Output: " + outputFile);
 	}
 	
 	public String buildCommandString() {
@@ -96,13 +89,6 @@ public class SourceWorker {
 
 		try {
 //			FileOutputStream fos = new FileOutputStream(execLog);
-//			String[] commands = command.split("[ ]+");
-//			
-//			commands[3] = commands[3].replace("*", "\\*");
-//			System.out.println(commands[3]);
-//			for(String c : commands) {
-//				System.out.println(c);
-//			}
 			
 			Process proc = Runtime.getRuntime().exec(command);
 			
